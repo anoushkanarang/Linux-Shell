@@ -1,0 +1,70 @@
+SYSTEM DESCRIPTION
+Implemented a Linux Based Shell using Linux System Calls and Inbuilt Libraries of C- 5 internal & external commands. 
+
+Internal Commands
+1. exit-  This command calls the system call exit(0). The shell will continue to run unless we call this command. 
+2. history-  This command stores the history of the shell uptil now. Basically, we write every command written onto the shell to a file named writehistory.txt. History command prints this file onto the text.
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell, done using I/O in C
+* -c flag- used to clear the history- erase the contents of writehistory.txt
+       
+3. Pwd- This prints the current directory using getcwd() command.
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell
+* -L flag- it is a default flag, a softlink for the pwd command.
+    
+4. echo- this is used to print any string onto the shell, done using write calls in I/O in C
+Options handled-
+* -e flag - this flag interprets \n as a new line character and prints everything after \n in a new line, doesn’t take inverted commas into account.
+* -E flag- this flag, similarly to echo prints everything and doesn’t take inverted commas into account.
+     
+5. cd - this is used to change the current directory to the string value provided using chdir()
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell
+* -L flag- it is a default flag, a softlink for the cd command as well.
+
+
+External Commands
+1. date- used to print date, time values in the local time zone, done using time functions.
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell
+* -u flag- used to display date, time in UTC.
+
+2. cat- used to read files, done using read, I/O in C 
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell.
+* -n flag- used to append a serial number in front of each line that is being written to the shell using cat command, done using I/O in C.
+    
+3. mkdir- we make directories using mkdir function  in C
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell.
+* -v flag- tells the status of every directory- if it’s creation was successful or not
+   
+4. ls- we list the directories using readdir and opendir functions in C
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell.
+* -1 flag- used to list each directory in a new line.
+
+5. rm- used to delete files using remove(file) in C
+Options handled-
+* --help flag - used to display the information about the command by writing from a text file onto the shell.
+* -i flag- prompts the user before every removal. If a character other than y is inputted, the file/folder is not deleted.
+  
+NOTE
+* After writing the command, give a space and then enter for proper execution.
+* We cannot exit the shell unless we type in “exit \n”
+
+
+Sample Test Case
+echo hello world 
+ls -1 
+date -u
+mkdir five six seven
+pwd --help 
+cat -n date.txt 
+date 
+history
+cd five
+pwd
+rm five
+exit
