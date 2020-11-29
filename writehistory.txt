@@ -1,0 +1,10 @@
+history 
+history --help 
+cat history.txt 
+cat --help 
+cat -n cd.txt 
+cat abc.txt 
+tfvbfv 
+exit 
+exit 
+catcattfvbfv
