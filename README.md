@@ -1,24 +1,37 @@
 # Linux Shell
-***This is an implementation of a basic Linux Shell in C using Linux System Calls and inbuilt C libraries***
 
-### HOW TO RUN? 
+**_This is an implementation of a basic Linux Shell in C using Linux System Calls and inbuilt C libraries_**
 
-##### DEPENDENCIES #####
-   1. **[Git](https://git-scm.com/downloads)** 
-   2. **[GCC Compiler](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/)**
+### HOW TO RUN?
 
+##### DEPENDENCIES
 
-##### Clone this repository using the command #####
+1.  **[Git](https://git-scm.com/downloads)**
+2.  **[GCC Compiler](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/)**
+
+##### Clone this repository using the command
 
     git clone https://github.com/anoushkanarang/Linux-Shell.git
-    
-##### Change the current working directory to Linux-Shell #####
+
+##### Change the current working directory to Linux-Shell
 
     cd Linux-Shell
-    
-##### run make to execute the program #####
+
+##### run make to execute the program
+
     make
-    
+
+### ABOUT
+
+<ul>
+    <li>shell.c stores the source code of the shell.</li>
+    <li>getcat.c, getdate.c, getls.c, getmkdir.c and getrm.c contain source code for cat, date, ls, mkdir, rm (external) commands respectively.</li>
+    <li>Description.txt contains description of each command executed in the shell.</li>
+    <li>writehistory.txt stores the history of the shell.</li>
+    <li>The remaining text files store the data to be displayed when the help flag of respective commands is called.</li>
+    <li>Makefile is used for compilation.</li>
+
+</ul>   
  
 ### COMMANDS IMPLEMENTED
 ##### INTERNAL
@@ -82,6 +95,7 @@
 </ol>
 
 ##### EXTERNAL
+
 <ol>
   <li>
     <a href="https://www.geeksforgeeks.org/date-command-linux-examples/">date</a> command is used to display the system date and time.
@@ -152,27 +166,15 @@
    
 ### Sample Test Case
 
-      echo hello world 
-      ls -1 
-      date -u 
-      mkdir five six seven 
-      pwd --help 
-      cat -n date.txt  
-      date 
-      history 
-      cd five 
-      pwd 
-      rm five 
-      exit 
-    
-
-
-
-
-
-    
-
-     
-
-
-
+      echo hello world
+      ls -1
+      date -u
+      mkdir five six seven
+      pwd --help
+      cat -n date.txt
+      date
+      history
+      cd five
+      pwd
+      rm five
+      exit
