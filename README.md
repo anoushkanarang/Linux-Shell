@@ -149,6 +149,24 @@
   </li>
     
 </ol>
+   
+### Sample Test Case
+
+      echo hello world 
+      ls -1 
+      date -u 
+      mkdir five six seven 
+      pwd --help 
+      cat -n date.txt  
+      date 
+      history 
+      cd five 
+      pwd 
+      rm five 
+      exit 
+    
+
+
 
 
 
